@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.weather{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.App{
+    width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px 25px;
+}
+
+.weather__title{
+    text-align: center;
+    font-style: italic;
+    color: slateblue;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+.weather__form{
+    display: flex;
+}
+input{
+    width: 65%;
+    height: 40px;
+}
+button{
+    width: 35%;
+    height: 40px;
+}
+.weather__top{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weather__temps{
+    display: flex;
+    align-items: center;
+}
+.weather__temp{
+    font-size: 70px;
+}
+.weather__switch{
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size: 23px;
+    display: flex;
+    column-gap: 10px;
+}
+
+span{
+    cursor: pointer;
+}
+span.active{
+    color: orangered;
+}
+.weather__description{
+    text-transform: uppercase;
+    color: red;
+    margin-top: 10px;
+}
+.weather__time{
+    color: slateblue;
+    font-size: 22px;
+}
+
+.weather__humidity{
+    color: black;
+    font-size: 25px;
+    margin-top: 15px;
+}
+.weather__humidity-count{
+    font-size: 22px;
+    color: slateblue;
+
+}
+.weather__5day{
+    width: 200px;
+    height: 40px;
+    background-color: slateblue;
+    display: block;
+    margin: 10px auto 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+}
+
+.weather-five{
+
+    height: 100vh;
+}
+
+.weather-five__main{
+    width: 200px;
+    height: 100px;
+    background-color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+.weather-five__main-date{
+    font-size: 20px;
+}
+.weather-five__row{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.weather-five__menu{
+    display: flex;
+    margin-left: 30px;
+    column-gap: 30px;
+}
+
+.weather-five__menu-list{
+    width: 100px;
+    background-color: slategray;
+    height: 100px;
+}

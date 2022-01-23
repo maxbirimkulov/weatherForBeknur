@@ -5,9 +5,37 @@
 }
 
 .main{
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
+
+}
+.main::before{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background: url("https://fourtonfish.com/tutorials/weather-web-app/images/default.jpg") center/100% 100% no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.weather__btn{
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    letter-spacing: 1px;
+    background-color: slateblue;
+    color: white;
+    border: 1px solid black;
+}
+
+.weather__input{
+    padding-left: 15px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;
+}
+
+.weather__input::placeholder{
+    color: black;
 }
 
 .weather{
@@ -16,17 +44,24 @@
     justify-content: center;
     align-items: center;
 }
-.App{
+.weather__block{
     width: 400px;
-    background-color: white;
+    background-color: #ffffff50;
     border-radius: 10px;
     padding: 30px 25px;
 }
-
+.weather__country{
+    font-size: 20px;
+    font-weight: bold;
+}
+.weather__city{
+    font-size: 25px;
+    letter-spacing: 1px;
+}
 .weather__title{
     text-align: center;
     font-style: italic;
-    color: slateblue;
+    color: black;
     font-size: 35px;
     margin-bottom: 20px;
 }
@@ -104,7 +139,6 @@ span.active{
 
 .weather-five{
 
-    height: 100vh;
 }
 
 .weather-five__main{
@@ -117,19 +151,127 @@ span.active{
 .weather-five__main-date{
     font-size: 20px;
 }
-.weather-five__row{
-    display: flex;
+.el{
+
     margin-bottom: 30px;
 }
 
 .weather-five__menu{
+
+    display: none;
+}
+.weather-five__menu.active{
     display: flex;
-    margin-left: 30px;
     column-gap: 30px;
+    position: absolute;
+    left: 50px;
+    list-style-type: none;
 }
 
 .weather-five__menu-list{
-    width: 100px;
-    background-color: slategray;
-    height: 100px;
+    width: 120px;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px 15px;
 }
+.weather-five__row{
+    display: flex;
+    position: relative;
+}
+.weather-five__btn{
+    width: 120px;
+    height: 30px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-left: 50px;
+    background-color: slateblue;
+    color: white;
+    font-size: 15px;
+    transition: .3s;
+}
+.weather-five__btn.active{
+    background-color: white;
+    color: slateblue;
+}
+
+.weather-five__btn:hover{
+    transition: .3s;
+    background-color: white;
+    color: slateblue;
+}
+
+.weather-five__menu-title{
+    color: white;
+    text-align: center;
+    font-size: 18px;
+}
+.weather-five__menu-temp{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+.weather-five__back{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #00000050;
+    border:1px solid white;
+    color: white;
+}
+
+.weather-five__current{
+    padding: 30px 0 0 50px;
+}
+
+.weather-five__title{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.weather-five__temp{
+    color: white;
+}
+
+.weather-five__switch{
+    font-size: 30px;
+}
+
+.weather-five__humidity, .weather-five__descr{
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    font-size: 21px;
+}
+.weather-five__descr{
+    margin-top: 15px;
+}
+
+.weather-five__row{
+    margin-top: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
